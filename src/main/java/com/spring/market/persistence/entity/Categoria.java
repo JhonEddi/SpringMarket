@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "categorias")
-public class Category {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class Category {
     private Boolean estado;
 
     @OneToMany(mappedBy = "categoria")
-    private List<Product> productos;
+    private List<Producto> productos;
 
     public Long getIdCategoria() {
         return idCategoria;

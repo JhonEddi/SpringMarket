@@ -5,10 +5,10 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "compras_producto")
-public class PurchasesProduct {
+public class ComprasProducto {
 
     @EmbeddedId
-    private PurchasesProductPK id;
+    private ComprasProductoPK id;
 
     @Column(name = "cantidad")
     private Long cantidad;
@@ -21,17 +21,17 @@ public class PurchasesProduct {
 
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
-    private Purchase compra;
+    private Compra compra;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
-    private Product producto;
+    private Producto producto;
 
-    public PurchasesProductPK getId() {
+    public ComprasProductoPK getId() {
         return id;
     }
 
-    public void setId(PurchasesProductPK id) {
+    public void setId(ComprasProductoPK id) {
         this.id = id;
     }
 

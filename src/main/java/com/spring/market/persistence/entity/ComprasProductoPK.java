@@ -2,11 +2,10 @@ package com.spring.market.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Id;
 import java.io.Serializable;
 
 @Embeddable
-public class PurchasesProductPK implements Serializable {
+public class ComprasProductoPK implements Serializable {
 
     @Column(name = "id_compra")
     private Long idCompra;
